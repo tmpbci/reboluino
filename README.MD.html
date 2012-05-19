@@ -1,0 +1,25 @@
+REBOLUINO
+
+A dead simple how-to reblet that pop up a GUI to send commands to an Arduino style device.
+
+Launch as rebol reboluino.r
+
+Click open button to open the serial port *first*
+Click on the commands button you want
+Click on Close button to free the serial port
+
+The serial port must modified according to your configuration.
+cu.foo is the port used on OS X. Here mine was cu.usbmodemfd1421 :
+
+system/ports/serial: [cu.usbmodemfd1421]
+
+Two buttons are embedded in the GUI, as example, to send two different commands. 
+
+Command1: "ON"
+Command2: "OFF"
+
+The included Arduino sketch Lights on and OFF led 13 first to show it's ready as you open the port,
+then wait ON and OFF strings to lights ON and OFF LED 13.
+
+You can of course modify the command name, add others,… as soon as you modify the arduino sketch accordingly.
+
